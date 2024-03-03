@@ -10,6 +10,7 @@ Thank you for your viewing!
 The tax calculator has been finished now
 There would be four salary ranges for users to choose from in this calculator
 These four salary ranges are based on income tax rates, which were published by New Zealand‘s IRD on April 1st
+
 <img width="782" alt="image" src="https://github.com/JingtaoXie/Calculator/assets/140026294/5b703a52-5abb-443b-aaf1-b1111a584144">
 
 
