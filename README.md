@@ -13,6 +13,7 @@ These four salary ranges are based on income tax rates, which were published by 
 
 
 The screenshot below is the basic interface of this calculator.
+
 <img width="274" alt="image" src="https://github.com/JingtaoXie/Calculator/assets/140026294/09aaa9aa-16ad-47fa-a9d0-3b0fab2ea134">
 
 
