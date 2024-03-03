@@ -1,4 +1,4 @@
-
+#Author JingtaoXie
 import tkinter as tk
 
 #Add a list to record all previous results, then can use it to get the result back.
@@ -11,7 +11,7 @@ def calculate():
         expression = entry.get()
         result = eval(expression)
         result_record.append(result)
-        result_label.config(text=f"Result: {result}")
+        result_label.config(text=f"Result: {round(result,3)}")
     except Exception as e:
         result_label.config(text="Error")
 
@@ -19,18 +19,23 @@ def calculate():
 def clear():
     entry.delete(0, tk.END)
 
+
+#to get the second-last element in the list(the last result in the result record)
 def lastresult():
     clear()
-    entry.insert(tk.END, result_record[-1])
+    entry.insert(tk.END, result_record[-2])
 
 
 root = tk.Tk()
-root.title("Simple Calculator")
+root.title("Simple Tax Calculator")
+root.iconbitmap("Money.ico")
 root.geometry("280x500")
 root.resizable(False, False)
 
 entry = tk.Entry(root, width=20, font=('Arial', 14, 'bold'))
 entry.grid(row=0, column=0, columnspan=4, pady=10,sticky="nsew")
+
+#all buttons
 
 button_clear=tk.Button(root, text="Reset", font=('Arial', 14, 'bold'),command=clear)
 button_clear.grid(row=1,column=0,columnspan=5,sticky="nsew")
@@ -51,7 +56,7 @@ button_taxrate4=tk.Button(root, text="ST", font=('Arial', 14, 'bold'),command=la
 button_taxrate4.grid(row=4,column=2,columnspan=2)
 
 button_taxrate5=tk.Button(root, text="SA", font=('Arial', 14, 'bold'),command=lambda:entry.insert(tk.END,0.39))
-button_taxrate5.grid(row=5,column=2,columnspan=2)
+button_taxrate5.grid(row=5,column=1,columnspan=2)
 
 
 buttons = [
@@ -76,16 +81,17 @@ result_label = tk.Label(root, text="Result: ", font=('Arial', 14))
 result_label.grid(row=rows, column=0, columnspan=4,sticky="nsew")
 
 
+#notes area
 note1 = tk.Label(root, font=('Arial', 10, 'bold'), text="SB($14000 or less)")
 note2 = tk.Label(root, font=('Arial', 10, 'bold'), text="S(Between $14001 and 48000)")
 note3 = tk.Label(root, font=('Arial', 10, 'bold'), text="SH(Between $48001 and 70000)")
 note4 = tk.Label(root, font=('Arial', 10, 'bold'), text="ST(Between $70001 and 180000)")
 note5 = tk.Label(root, font=('Arial', 10, 'bold'), text="SA(more than $180000)")
-note1.grid(row=11, column=0, columnspan=4, sticky="nsew")
-note2.grid(row=12, column=0, columnspan=4, sticky="nsew")
-note3.grid(row=13, column=0, columnspan=4, sticky="nsew")
-note4.grid(row=14, column=0, columnspan=4, sticky="nsew")
-note5.grid(row=15, column=0, columnspan=4, sticky="nsew")
+note1.grid(row=13, column=0, columnspan=4, sticky="nsew")
+note2.grid(row=14, column=0, columnspan=4, sticky="nsew")
+note3.grid(row=15, column=0, columnspan=4, sticky="nsew")
+note4.grid(row=16, column=0, columnspan=4, sticky="nsew")
+note5.grid(row=17, column=0, columnspan=4, sticky="nsew")
 
 
 
