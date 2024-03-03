@@ -22,7 +22,7 @@ def divisor(num1,num2):
 
 def ask_continue():
         print("Continue? Y/N")
-        cancontinue = input()
+        cancontinue = input().upper()
         if cancontinue == "Y":
             return True
         else:
