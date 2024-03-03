@@ -5,6 +5,7 @@ num2=''
 result=''
 operation=''
 
+
 print("Welcome to calculator")
 ifcontinue=True
 
