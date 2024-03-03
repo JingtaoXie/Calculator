@@ -5,7 +5,7 @@ This simple calculator was made by Zeyu(Jerry) Zhao and Jingtao(Toby) Xie. This 
 
 Thank you for your viewing!
 
-#20240302 log
+#20240303 log
 
 The tax calculator has been finished now
 There would be four salary ranges for users to choose from in this calculator
